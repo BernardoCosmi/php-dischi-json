@@ -10,7 +10,29 @@
 </head>
 <body>
     <div id="app">
-        
+        <!-- TITOLO -->
+        <h1 class="text-center">
+            Lista dischi
+        </h1>
+
+        <!-- Dischi -->
+        <div>
+            <div v-for="album in albums">
+                <div>
+                    <!-- Card img -->
+                    <img :src="album.poster" alt="album poster">
+
+                    <!-- Card body -->
+                    <div>
+                        <h5 class="card-title">{{ album.title }}</h5>
+                        <p class="card-text">{{ album.author }}</p>
+                        <p class="card-text">{{ album.year }}</p>
+                        <p class="card-text">{{ album.genre }}</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 
     <!-- Includo Vue.js -->
