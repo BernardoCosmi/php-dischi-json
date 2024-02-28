@@ -11,21 +11,21 @@
 <body>
     <div id="app">
         <!-- TITOLO -->
-        <h1 class="text-center">
+        <h1 class="text-center m-5 fw-bolder fs-1 text-uppercase">
             Lista dischi
         </h1>
 
         <!-- Dischi -->
-        <div>
-            <div v-for="album in albums">
-                <div>
+        <div class="row row-cols-md-3 g-4" data-bs-theme="dark">
+            <div v-for="album in albums" class=" mb-4 d-flex justify-content-center">
+                <div class="card col-7">
                     <!-- Card img -->
-                    <img :src="album.poster" alt="album poster">
+                    <img :src="album.poster" class="card-img-top px-5 pt-5 pb-1" alt="album poster">
 
                     <!-- Card body -->
-                    <div>
-                        <h5 class="card-title">{{ album.title }}</h5>
-                        <p class="card-text">{{ album.author }}</p>
+                    <div class="card-body text-center px-5 py-4 ">
+                        <h4 class="card-title fw-bold">{{ album.title }}</h4>
+                        <p class="card-text fw-bold">{{ album.author }}</p>
                         <p class="card-text">{{ album.year }}</p>
                         <p class="card-text">{{ album.genre }}</p>
                     </div>
