@@ -17,7 +17,7 @@
 
         <!-- Dischi -->
         <div class="row row-cols-md-3 g-4" data-bs-theme="dark">
-            <div v-for="album in albums" class=" mb-4 d-flex justify-content-center">
+            <div v-for="album in albums" :key="album.id" class=" mb-4 d-flex justify-content-center">
                 <div class="card col-7">
                     <!-- Card img -->
                     <img :src="album.poster" class="card-img-top px-5 pt-5 pb-1" alt="album poster">
